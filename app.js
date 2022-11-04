@@ -35,11 +35,11 @@ let pause = true
 //Function de changement d'icone  quand on click sur le bouton lors du demarrage du temps et la mise en pause. 
 function handlePlayPause() {
     if(startPauseBtn.firstElementChild.src.includes("play")) {
-        startPauseBtn.firstElementChild.src = "ressources/pause.svg";
+        startPauseBtn.firstElementChild.src = "assets/pause.svg";
         pause = false;
     }
     else {
-        startPauseBtn.firstElementChild.src = "ressources/play.svg"
+        startPauseBtn.firstElementChild.src = "assets/play.svg"
         pause = true
     }
 
@@ -99,7 +99,7 @@ function reset() {
     displayPause.textContent = formatTime(restTime);
     pause = true
     handleClassAnimation({work: false, rest: false})
-    startPauseBtn.firstElementChild.src = "ressources/play.svg"; //On remet l'icone play
+    startPauseBtn.firstElementChild.src = "assets/play.svg"; //On remet l'icone play
 
     clearInterval(timerID)
     currentInterval = false;
